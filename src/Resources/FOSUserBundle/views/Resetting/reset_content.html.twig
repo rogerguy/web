@@ -1,8 +1,35 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-    {{ form_widget(form) }}
+   <div class="container">    
+   
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                
+                    <div class="panel-heading">
+                    
+                        <div class="panel-title">Changez votre mot de passe </div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                        
+    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                      {{ form_row(form.plainPassword.first,{'label': ' ','attr': {'placeholder': 'saississez votre nouveau mot de passe'}})}}                                       
+                                    </div>
+
+                              <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                      {{ form_row(form.plainPassword.second,{'label': ' ','attr': {'placeholder': 'retapez votre mot de passe'}})}}                                       
+                                    </div>
+
     <div>
-        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+     <button  class="btn btn-primary">{{ 'resetting.reset.submit'|trans }}</button>
+  <a href="{{ path('index') }}"<button  class="btn btn-danger">{{ button_label|default('retour à la page d\'acceuil') }}</button>   </a>
     </div>
+
+ 
+                      
 {{ form_end(form) }}

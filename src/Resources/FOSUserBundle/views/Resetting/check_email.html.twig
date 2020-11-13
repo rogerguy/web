@@ -3,7 +3,25 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-<p>
-{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
-</p>
+ <div class="container">    
+   
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                
+                    <div class="panel-heading">
+                    
+                        <div class="panel-title">Message de  réinitialisation</div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}</br>
+
+ <div style="margin-left:70px" class="panel-body" >
+  <a href="{{ path('fos_user_security_login') }}"<button  class="btn btn-primary">{{ button_label|default('connexion') }}</button>   </a>
+  <a href="{{ path('index') }}"<button  class="btn btn-danger">{{ button_label|default('retour à la page d\'acceuil') }}</button>   </a>
+  </div>
+</form>
 {% endblock %}
