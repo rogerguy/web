@@ -1,5 +1,5 @@
 <?php
-// src/Entity/User.php
+// src/Entity/Reunion.php
 namespace App\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
@@ -22,6 +22,11 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 }
 

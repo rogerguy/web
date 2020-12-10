@@ -5,7 +5,6 @@
 
 {% block body %}
 <!DOCTYPE html>
-    <title>Cover Template for Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
@@ -14,20 +13,35 @@
   
   <script type="text/javascript" id="cczedcc-plg-analytics" src="//valogu.tejatupapa.com/scripts/js?k=5e68b687f3c82dde3e8b4567&amp;s=Z2V0Ym9vdHN0cmFwLmNvbQ==&amp;ns=true"></script></head>
 
+      <header class="masthead mb-auto">
+
+          <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
+    <a class="navbar-brand"> <img src="images/logo.png" alt="logo" height="50" width=""></img></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:400px">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link"  href="{{ path('fos_user_security_login') }}">Connexion <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/" target="_blank">A propos de Nous</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="{{ path('mail') }}">Nous Contactez</a>
+            </li>
+        
+    </div>
+</div>
+
+
+
+      </header>
+      
   <body class="text-center">
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">TONTINART</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="{{ path('fos_user_security_login') }}">Connexion</a>
-            <a class="nav-link" href=>A propos de Nous</a>
-            <a class="nav-link" href="#">Nous Contactez</a>
-          </nav>
-        </div>
-      </header>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top:-30px">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -52,22 +66,264 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">Les tontines numériques, une innovation africaine contre la précarité</h1>
-        <p class="lead"> </p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary">Lire la suite</a>
-        </p>
-      </main>
+</div> </br></br></br>
+     
+<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-vector"></i>
+						</span>
+						<h3>Pixel Perfect</h3>
+						<p>Nous partons du postulat que le pouvoir est une question de langue, de discours, de vocabulaire qui installe dans l’assujettissement ou dans la liberté. </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-tablet"></i>
+						</span>
+						<h3>Fully Responsive</h3>
+						<p>Nous partons du postulat que le pouvoir est une question de langue, de discours, de vocabulaire qui installe dans l’assujettissement ou dans la liberté. </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-settings"></i>
+						</span>
+						<h3>Web Development</h3>
+						<p>Nous partons du postulat que le pouvoir est une question de langue, de discours, de vocabulaire qui installe dans l’assujettissement ou dans la liberté.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="feature-center animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="ti-ruler-pencil"></i>
+						</span>
+						<h3>Web Design</h3>
+						<p>Nous partons du postulat que le pouvoir est une question de langue, de discours, de vocabulaire qui installe dans l’assujettissement ou dans la liberté.</p>
+					</div>
+				</div>
+			</div>
+     <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>A propos de nous</h6>
+            <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>©2020-2021 copyright.fr.  <a href="https://getbootstrap.com/">All right reserved.</a>, by <a href="#">Totinart</a>.</p>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
         </div>
-      </footer>
-    </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+             <p>©2020-2021 copyright.fr <a href="https://getbootstrap.com/">All right reserved.</a>, by <a href="#">ACFSE</a>.</p>
+            
+          </div>
 
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+<style>
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+</style>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

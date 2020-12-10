@@ -1,8 +1,21 @@
-{% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+
+<div class="modal-dialog">
+    <div class="modal-content">
+      
+   <div class="panel-heading">              
+        <div class="panel-title">Profils Utilisateur</div>
+    </div>  
+      <div class="modal-body">
+      <p> <i class="fa fa-user-circle-o" aria-hidden="true"> Nom Utilisateur</i> :  {{ form_widget(form.username) }} </p>
+      <p> <i class="glyphicon glyphicon-envelope" aria-hidden="true"> </i> Adresse Email :  {{ form_widget(form.email) }} </p>
+      <p> {{ form_widget(form)}}</p>
+      </div>
+      <div class="modal-footer">
+       <button type="submit" value="{{ 'profile.edit.submit'|trans }}" class="btn btn-primary">Modifier Profils</button>
+        <button onClick="javascript:history.go(-1)" type="button" class="btn btn-danger" data-dismiss="modal">ANNULER</button>
+      </div>
     </div>
+  </div>
 {{ form_end(form) }}

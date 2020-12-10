@@ -3,8 +3,30 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
+    
+<div class="container">    
+   
+        <div id="loginbox" style="margin-top:100px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >   
+                <div class="alert alert-primary" role="alert">
+  <strong>Hello</strong> votre compte est maintenant Crée.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="fos_user_user_show">
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
     <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
+</div>
+<div style="margin-left:80px; margin-top:20px">
+ <a href="{{ path('acceuil') }}"<button type="submit" id="_submit" name="_submit" class="btn btn-primary">{{ button_label|default('acceder à l\'application') }}</button></a>
+  <a href="{{ path('index') }}"<button  class="btn btn-danger">{{ button_label|default('retour à la page d\'acceuil') }}</button>   </a>
+  
+        </div>
+
 {% endblock fos_user_content %}
+
+
