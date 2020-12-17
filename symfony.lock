@@ -115,7 +115,7 @@
         "version": "2.2.3"
     },
     "php": {
-        "version": "7.2"
+        "version": "7.4"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -204,6 +204,9 @@
     },
     "symfony/dependency-injection": {
         "version": "v4.2.12"
+    },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
     },
     "symfony/doctrine-bridge": {
         "version": "v4.2.12"
@@ -501,6 +504,9 @@
     },
     "twig/twig": {
         "version": "v2.13.1"
+    },
+    "webimpress/safe-writer": {
+        "version": "2.1.0"
     },
     "webmozart/assert": {
         "version": "1.9.1"
