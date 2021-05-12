@@ -2,15 +2,16 @@
 // src/Entity/User.php
 namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
-use Gedmo\Mapping\Annotation as Gedmo;
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="reunion")
  */
 class Reunion
 {
+    public function __construct()
+    {
+        $this->created = new \DateTime();
+    }
 
  /**
      * @ORM\Id
@@ -21,26 +22,30 @@ class Reunion
 
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="titre", type="string", length=255, nullable=false)
+     * @ORM\Column(name="membrepresent")
      */   
-    private $titre;
+    private $membrepresent;
+
+      /**
+     * @ORM\Column(name="membreabsent")
+     */   
+    private $membreabsent;
 
 
    /**
      * @var string
      *
-     * @ORM\Column(name="contenue", type="string", length=255, nullable=false)
+     * @ORM\Column(name="contenue", type="text")
      */   
     private $contenu;
-    
-     /**
-     * @Gedmo\Timestampable(on="create")
-     * @Assert\DateTime
-     * @var string A "Y-m-d H:i:s" formatted value
+
+
+    /**
+     
+     * @var \DateTime $created
+     * @ORM\Column(type="datetime")
      */
-    protected $createdAt;
+    private $created;
 
     public function getId(): ?int
     {
@@ -71,4 +76,39 @@ class Reunion
         return $this;
     }
 
+    public function getCreated(): ?\DateTimeInterface
+    {
+        return $this->created;
+    }
+
+    public function setCreated(\DateTimeInterface $created): self
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    public function getMembrepresent(): ?string
+    {
+        return $this->membrepresent;
+    }
+
+    public function setMembrepresent(string $membrepresent): self
+    {
+        $this->membrepresent = $membrepresent;
+
+        return $this;
+    }
+
+    public function getMembreabsent(): ?string
+    {
+        return $this->membreabsent;
+    }
+
+    public function setMembreabsent(string $membreabsent): self
+    {
+        $this->membreabsent = $membreabsent;
+
+        return $this;
+    }
 }

@@ -17,9 +17,6 @@
 
 <div class="fos_user_user_show">
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
 </div>
 <div style="margin-left:80px; margin-top:20px">
  <a href="{{ path('acceuil') }}"<button type="submit" id="_submit" name="_submit" class="btn btn-primary">{{ button_label|default('acceder à l\'application') }}</button></a>

@@ -1,11 +1,68 @@
-{% extends 'base.html.twig' %}
+ {% extends 'base.html.twig' %}
 
-{% block title %}New Reunion{% endblock %}
-
+{% block title %}Reunion{% endblock %}
 {% block body %}
-    <h1>Create new Reunion</h1>
+ {% include 'header.html.twig' %}
+<div class="container contact-form">
+            <div class="contact-image">
+                <img src="../images/logo.png" alt="rocket_contact"/>
+            </div>
+        {% if checkof is defined %}
+   
+        <div id="loginbox">                    
+            <div class="panel panel-info" > 
+                    <div class="alert alert-danger" role="alert">
+                <strong>Attention :</strong>Au moins un membre de la reunion doit etre présent 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+        {% endif %}
 
-    {{ include('reunion/_form.html.twig') }}
+              {% if identique is defined %}
+                    <div class="alert alert-danger" role="alert">
+                <strong>Attention :</strong>un membre ne peux pas etre à la fois présent et Absent
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+        {% endif %}
+        
 
-    <a href="{{ path('reunion_index') }}">back to list</a>
+            <form method="post" action="{{ path('reunion_new') }}"  name="frm">
+                <h3>Compte rendu de reunion</h3>
+                <h4  style="margin-top: -60px;margin-left:280px"> {{ 'now' | localizeddate('full', 'none') }} <h4></br>
+               <div class="row">
+                    <div class="col-md-6">
+                     <div class="form-group" >
+                        {{ form_row(form.membrepresent,{'label': 'Membres Présents '})}} <br>
+                              {{ form_row(form.membreabsent,{'label': 'Membres Absents '})}}
+                         </div> 
+                       </div>  
+                      
+                   
+                    <div class="col-md-6">
+                     
+                        <div class="form-group" >
+                             {{ form_row(form.contenu,{'label': ' ','attr': {'placeholder': 'Compte rendu','style':"width: 140%; height: 300px; margin-left:-50px",'class':"form-control"}})}}    
+                        </div>
+                    </div>
+                </div><br><br>
+
+                  <div class="form-group" style="margin-top: 30px;margin-right:30px;width:500px ">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Enregistré Le CR" />
+                        </div>
+                        <div class="form-group" style="margin-top:-60px;margin-left:400px;width:500px ">
+                       
+                          <a href="{{ path('acceuil') }}"> <input type="button" class="btnContacte" value="Retour"/> </a>
+                        </div>
+            </form>
+</div>
+        {% include 'footer.html.twig' %}
+ <style>
+body{
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+</style>
+
 {% endblock %}

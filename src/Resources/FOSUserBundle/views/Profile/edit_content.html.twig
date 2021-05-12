@@ -8,7 +8,7 @@
         <div class="panel-title">Profils Utilisateur</div>
     </div>  
       <div class="modal-body">
-      <p> <i class="fa fa-user-circle-o" aria-hidden="true"> Nom Utilisateur</i> :  {{ form_widget(form.username) }} </p>
+      <p> <i class="glyphicon glyphicon-user" aria-hidden="true">Nom Utilisateur</i> :  {{ form_widget(form.username) }} </p>
       <p> <i class="glyphicon glyphicon-envelope" aria-hidden="true"> </i> Adresse Email :  {{ form_widget(form.email) }} </p>
       <p> {{ form_widget(form)}}</p>
       </div>
@@ -19,3 +19,7 @@
     </div>
   </div>
 {{ form_end(form) }}
+
+  {% block footer %}
+  
+            {% endblock footer %}

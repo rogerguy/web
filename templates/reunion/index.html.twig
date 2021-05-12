@@ -8,18 +8,20 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Titre</th>
+                <th>Date de la reunion</th>
+                <th>Membres Presents</th>
                 <th>Contenu</th>
+             <th>Membres Absents</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for reunion in reunions %}
             <tr>
-                <td>{{ reunion.id }}</td>
-                <td>{{ reunion.titre }}</td>
+                <td>{{ reunion.created|date('Y-m-d') }}</td>
+                <td>{{ reunion.membrepresent }}</td>
                 <td>{{ reunion.contenu }}</td>
+                <td>{{ reunion.membreabsent }}</td>
                 <td>
                     <a href="{{ path('reunion_show', {'id': reunion.id}) }}">show</a>
                     <a href="{{ path('reunion_edit', {'id': reunion.id}) }}">edit</a>
