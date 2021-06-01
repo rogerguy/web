@@ -14,18 +14,18 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Reunion</div>
+                                    <div class="card-body">Crée Compte Rendu</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="{{path('reunion_interface')}}">Voir les details</a>
+                                        <a class="small text-white stretched-link" href="{{path('reunion_new')}}">Voir les details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Actualités</div>
+                                    <div class="card-body">Lister les Comptes rendus Crées </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Voir les details</a>
+                                        <a class="small text-white stretched-link" href="{{path('reunion_index')}}">Voir les details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -49,43 +49,15 @@
                                 </div>
                             </div>
                         </div>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">courbes d'Evolution  </li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area mr-1"></i>
-     
-                                        Courbe d'inscription des membres avec le Temps                                   
-                        
-                    {% block javascripts %}
-                        <script  type="text/javascript">
-                            var dateinscription = {{ dateinscription | json_encode | raw }};
-                            var nombreuser = {{  nombreuser | json_encode | raw }};
-                        </script>
-                    {% endblock %}
-
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar mr-1"></i>
-                                        Apercu de la Trésorerie 
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div> 
-                        
-                </main>
-
+                         
+                </main><br>
+                 <div class="form-group">
+                       
+                          <a href="{{path('acceuil')}}"> <input type="button" class="btn btn-primary" value="Retour"/> </a>
+                    </div>
+  <div id="footer">
     {% include 'footer.html.twig' %}
+        </div>
         
             </div>
         </div>

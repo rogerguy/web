@@ -28,6 +28,20 @@ class ReunionController extends AbstractController
             'reunions' => $reunions,
         ]);
     }
+
+     /**
+     * @Route("/interface", name="reunion_interface", methods={"GET"})
+     */
+    public function interface(): Response
+    {
+        $reunions = $this->getDoctrine()
+            ->getRepository(Reunion::class)
+            ->findAll();
+        return $this->render('reunion/interface.html.twig', [
+            'reunions' => $reunions,
+        ]);
+    }
+
     //cette function permet de rechercher les utilisateurs les utilisateurs par leur id 
     public function finbymember($value): string {
 
