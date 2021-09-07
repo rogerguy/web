@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ACFSE{% endblock %}
+
+{% block body %}
+  {% include 'header.html.twig' %}
+  <table class="table">
+    <tbody>
+          <thead><br>
+      <tr>
+        <th>Nom des Membres</th>
+        <th>Email des Membres</th>
+        <th>Date D'adhesion des Membres</th>
+      </tr>
+    </thead>
+            {% for allusers in alluser %}
+                <tr>
+                    <td >{{ allusers.username }}</td>
+                    <td>{{ allusers.email }}</td>
+                    <td>{{ allusers.created |date('Y-m-d') }}</td>
+                    <td>
+                        <a href="{{ path('user_show', {'id': allusers.id}) }}"><input type="button" class="btn btn-primary" value="affiché Le Profil"/></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                
+                    <td colspan="4">Il n'ya pas de Compte rendu Enregistré</td> 
+                </tr>
+            {% endfor %}
+    </tbody>
+</table>
+<div>
+  <a href="javascript:history.go(-1)"<button  class="btn btn-danger">{{ button_label|default('retour') }}</button>   </a>
+</div>
+    {% include 'footer.html.twig' %}
+        
+            </div>
+        </div>
+
+    </body>
+
+{% endblock %}

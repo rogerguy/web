@@ -35,4 +35,32 @@ class FirstPageController extends AbstractController
             'dateinscription'=>$valeurdate
         ]);
     }
+
+    /**
+     * @Route("/memberlist", name="listedesmemebres")
+     */
+
+     public function memberlist (): Response 
+     {
+        $alluser = $this->getDoctrine()
+        ->getRepository(User::class)
+        ->findAll();
+     
+        return $this->render('utilisateur/listemembre.html.twig', [
+            'alluser' => $alluser         
+        ]);
+
+     }
+
+     /**
+     * @Route("/{id}", name="user_show", methods={"GET"})
+     */
+    public function show(User $user): Response
+    {
+        return $this->render('utilisateur/profil.html.twig', [
+            'user' => $user,
+        ]);
+    }
+
+
 }
