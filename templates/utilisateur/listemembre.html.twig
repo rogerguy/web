@@ -19,7 +19,7 @@
                     <td>{{ allusers.email }}</td>
                     <td>{{ allusers.created |date('Y-m-d') }}</td>
                     <td>
-                        <a href="{{ path('user_show', {'id': allusers.id}) }}"><input type="button" class="btn btn-primary" value="affiché Le Profil"/></a>
+                        <a href="{{ path('user_show', {'id': allusers.id})}}"><input type="button" class="btn btn-primary" value="affiché Le Profil"/></a>
                     </td>
                 </tr>
             {% else %}
